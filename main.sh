@@ -76,7 +76,7 @@ fi
 
 checktor() {
 
-check=$(curl --socks5-hostname localhost:9050 -s https://check.torproject.org > /dev/null; echo $?)
+check=$(curl --socks5-hostname localhost:8080-s https://check.torproject.org > /dev/null; echo $?)
 
 if [[ "$check" -gt 0 ]]; then
 printf "\e[1;91mPlease, check your TOR Connection! Just type tor or service tor start\n\e[0m"
